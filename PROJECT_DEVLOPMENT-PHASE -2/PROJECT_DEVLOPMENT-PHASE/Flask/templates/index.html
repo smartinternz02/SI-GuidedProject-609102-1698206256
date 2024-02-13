@@ -1,0 +1,87 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vegetable_Classification</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet"> 
+	<style>
+	
+	.bg-dark {
+		background-color: 	#4B92BB!important;
+	}
+	#result {
+		color: #0a1c4ed1;
+	}
+	body
+{
+    background-image: url("https://wallpaperaccess.com/full/327148.jpg");
+    background-size: cover;
+}
+
+	</style>
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-dark bg-secondary">
+        <div class="container">
+            <a class="navbar-brand" href="#">vegetable_Classification using CNN</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div id="content" style="margin-top:2em">
+		<div class="container">
+		  <div class="row">
+			<div class="col-sm-6 bd">
+			  <h3>vegetable_Classification: </h3>
+			  <br>
+			  <p>Green Classify is a specialized platform solely focused on the task of vegetable image classification. We utilize advanced machine learning algorithms and maintain a vast database to provide precise and dependable classification results for a wide variety of vegetables. Our aim is to simplify the process of identitying vegetables by leveraging the power of image recognition technology. Whether you are a chef, a nutritionist, or a vegetable enthusiast, Veggie Visions is your go-to resource for accurately categorizing vegetables and expanding your understanding of their diverse characteristics. Join us on this platform to explore the world of vegetable classification and unlock a deeper appreciation for the rich tapestry of edible plants..</p>
+				<img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.thespruceeats.com%2Fthmb%2F6lfcov0DyrPVtE6zhX2law4RFA4%3D%2F1500x0%2Ffilters%3Ano_upscale()%3Amax_bytes(150000)%3Astrip_icc()%2FfreshvegetablesAlexRaths-4c1ea186a88e4fd7b95283eee614600c.jpg&tbnid=daUb1XM6h--bpM&vet=12ahUKEwiH9sv9seGCAxW2S2wGHVSWBS4QMyg0egUIARDsAQ..i&imgrefurl=https%3A%2F%2Fwww.thespruceeats.com%2Fhow-to-store-vegetables-4687049&docid=zdqsbscuM8yUVM&w=1500&h=961&q=vegetables%20images&ved=2ahUKEwiH9sv9seGCAxW2S2wGHVSWBS4QMyg0egUIARDsAQ" height="50%",width="20%">       
+			</div>
+			<div class="col-sm-6">U0jSFLKb+hF
+				<div>
+					<h4>Upload Image Here To Identify the vegetable</h4>
+			<form action = "http://localhost:5000/" id="upload-file" method="post" enctype="multipart/form-data">
+				<label for="imageUpload" class="upload-label">
+					Choose...
+				</label>
+				<input type="file" name="image" id="imageUpload" accept=".png, .jpg, .jpeg">
+			</form>
+			
+
+			<div class="image-section" style="display:none;">
+				<div class="img-preview">
+					<div id="imagePreview">
+					</div>
+				</div>
+				<div>
+					<button type="button" class="btn btn-info btn-lg " id="btn-predict">Predict!</button>
+				</div>
+			</div>
+
+			<div class="loader" style="display:none;"></div>
+
+			<h3>
+				<span id="result"> </span>
+			</h3>
+
+		</div>
+			</div>
+			 
+		  </div>
+		</div>
+		</div>
+    </div>
+</body>
+
+<footer>
+    <script src="{{ url_for('static', filename='js/main.js') }}" type="text/javascript"></script>    
+</footer>
+
+</html>
